@@ -17,7 +17,7 @@ export default function HomeCta() {
             className={baseButton({ color: 'primary' })}
             variant="ghost"
           >
-            Let's Chat
+            Let&apos;s Chat
           </Button>
         </Link>
 

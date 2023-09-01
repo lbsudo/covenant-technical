@@ -27,8 +27,8 @@ export default function MotionBar({ }: Props) {
         <div className="text-6xl pb-6 font-light flex">
           <ul className="motion-bar1a text-6xl pb-6 font-light list-decimal">
             {words.map((word, index) => (
-              <li className="inline-block whitespace-nowrap pr-6">
-                <p key={index} className=" flex flex-row ">
+              <li key={index} className="inline-block whitespace-nowrap pr-6">
+                <p className=" flex flex-row ">
                   {word}
                 </p>
               </li>
@@ -36,8 +36,8 @@ export default function MotionBar({ }: Props) {
           </ul>
           <ul className="motion-bar1b text-6xl pb-6 font-light list-decimal">
             {words.map((word, index) => (
-              <li className="inline-block whitespace-nowrap pr-6">
-                <p key={index} className="inline-block whitespace-nowrap ">
+              <li key={index} className="inline-block whitespace-nowrap pr-6">
+                <p className="inline-block whitespace-nowrap ">
                   {word}
                 </p>
               </li>
@@ -49,8 +49,8 @@ export default function MotionBar({ }: Props) {
         <div className="text-6xl pb-6 font-light flex">
           <ul className="motion-bar2a text-6xl pb-6 font-light list-decimal">
             {words2.map((word, index) => (
-              <li className="inline-block whitespace-nowrap pr-6">
-                <p key={index} className="inline-block whitespace-nowrap">
+              <li key={index} className="inline-block whitespace-nowrap pr-6">
+                <p className="inline-block whitespace-nowrap">
                   {word}
                 </p>
               </li>
@@ -58,8 +58,8 @@ export default function MotionBar({ }: Props) {
           </ul>
           <ul className="motion-bar2b text-6xl  font-light list-decimal">
             {words2.map((word, index) => (
-              <li className="inline-block whitespace-nowrap pr-6">
-                <p key={index} className="inline-block whitespace-nowrap">
+              <li key={index} className="inline-block whitespace-nowrap pr-6">
+                <p className="inline-block whitespace-nowrap">
                   {word}
                 </p>
               </li>

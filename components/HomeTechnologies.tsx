@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 
 export default function HomeTechnologies() {
@@ -8,40 +9,40 @@ export default function HomeTechnologies() {
       <div className='bg-black flex justify-center items-center pb-8'>
         <div className='w-4/5 grid grid-cols-2 md:grid-cols-4 gap-10 gap-x-0 md:gap-10'>
           <div className='flex justify-center items-center'>
-            <img alt="wordpress" src="https://cdn.simpleicons.org/Wordpress/white" className='h-20 w-20' />
+            <Image alt="wordpress" src="https://cdn.simpleicons.org/Wordpress/white" className='h-20 w-20' />
           </div>
           <div className='flex justify-center items-center'>
-            <img alt="styled-components" src="https://cdn.simpleicons.org/drupal/white" className='h-20 w-20' />
+            <Image alt="styled-components" src="https://cdn.simpleicons.org/drupal/white" className='h-20 w-20' />
           </div>
           <div className='flex justify-center items-center'>
-            <img alt="styled-components" src="https://cdn.simpleicons.org/magento/white" className='h-20 w-20' />
+            <Image alt="styled-components" src="https://cdn.simpleicons.org/magento/white" className='h-20 w-20' />
           </div>
           <div className='flex justify-center items-center'>
-            <img alt="styled-components" src="https://cdn.simpleicons.org/sitecore/white" className='h-20 w-20' />
+            <Image alt="styled-components" src="https://cdn.simpleicons.org/sitecore/white" className='h-20 w-20' />
           </div>
           <div className='flex justify-center items-center'>
-            <img alt="styled-components" src="https://cdn.simpleicons.org/squarespace/white" className='h-20 w-20' />
+            <Image alt="styled-components" src="https://cdn.simpleicons.org/squarespace/white" className='h-20 w-20' />
           </div>
           <div className='flex justify-center items-center'>
-            <img alt="styled-components" src="https://cdn.simpleicons.org/bigcommerce/white" className='h-20 w-20' />
+            <Image alt="styled-components" src="https://cdn.simpleicons.org/bigcommerce/white" className='h-20 w-20' />
           </div>
           <div className='flex justify-center items-center'>
-            <img alt="styled-components" src="https://cdn.simpleicons.org/shopify/white" className='h-20 w-20' />
+            <Image alt="styled-components" src="https://cdn.simpleicons.org/shopify/white" className='h-20 w-20' />
           </div>
           <div className='flex justify-center items-center'>
-            <img alt="styled-components" src="https://cdn.simpleicons.org/contentful/white" className='h-20 w-20' />
+            <Image alt="styled-components" src="https://cdn.simpleicons.org/contentful/white" className='h-20 w-20' />
           </div>
           <div className='flex justify-center items-center'>
-            <img alt="styled-components" src="https://cdn.simpleicons.org/webflow/white" className='h-20 w-20' />
+            <Image alt="styled-components" src="https://cdn.simpleicons.org/webflow/white" className='h-20 w-20' />
           </div>
           <div className='flex justify-center items-center'>
-            <img alt="styled-components" src="https://cdn.simpleicons.org/microsoft/white" className='h-20 w-20' />
+            <Image alt="styled-components" src="https://cdn.simpleicons.org/microsoft/white" className='h-20 w-20' />
           </div>
           <div className='flex justify-center items-center'>
-            <img alt="styled-components" src="https://cdn.simpleicons.org/ibm/white" className='h-20 w-20' />
+            <Image alt="styled-components" src="https://cdn.simpleicons.org/ibm/white" className='h-20 w-20' />
           </div>
           <div className='flex justify-center items-center'>
-            <img alt="styled-components" src="https://cdn.simpleicons.org/linux/white" className='h-20 w-20' />
+            <Image alt="styled-components" src="https://cdn.simpleicons.org/linux/white" className='h-20 w-20' />
           </div>
         </div>
       </div>

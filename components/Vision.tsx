@@ -10,7 +10,7 @@ export default function Vision() {
         <div className='text-center text-4xl md:text-6xl font-bold py-16'>
           <h1>Covenant Vision</h1>
           <p className='text-base md:text-lg mt-4 pb-8'>
-            Our vision is to be our clients' full suite Digital Design and development agency and offer a full suite of services to help our clients go from the first concept to deployment and beyond using innovative design, seamless user experiences, and emerging technologies. We aspire to be the catalyst to help you thrive in the digital world.
+            Our vision is to be our clients&apos; full suite Digital Design and development agency and offer a full suite of services to help our clients go from the first concept to deployment and beyond using innovative design, seamless user experiences, and emerging technologies. We aspire to be the catalyst to help you thrive in the digital world.
           </p>
           <p className='text-base md:text-lg mt-4 pb-8'>
             The foundation of Covenant Digital is the diamond of principles we operate our business on:

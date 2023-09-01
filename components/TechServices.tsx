@@ -118,7 +118,7 @@ export default function TechServices() {
       <AccordionItem key="6" aria-label="Continuous Care" title="Continuous Care">
         <div className='flex flex-col md:flex-row w-full justify-between '>
           <div className='text-left md:w-1/2 md:text-2xl'>
-            <p>Providing dedicated support and experience to ensure that your site's performance is top-tier.</p>
+            <p>Providing dedicated support and experience to ensure that your site&apos;s performance is top-tier.</p>
           </div>
           <div className='px-4'></div>
           <div className='text-center md:text-left md:w-1/2 md:flex md:flex-col md:justify-center'>
