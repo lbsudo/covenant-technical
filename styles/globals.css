@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.motion-bars-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
+
+.motion-bar1a,
+.motion-bar1b,
+.motion-bar2a,
+.motion-bar2b {
+  display: flex;
+  align-items: center;
+  padding: 0; /* Remove padding */
+}
+
+.motion-bar1a {
+  white-space: nowrap;
+  animation: moveWords1a 60s linear -20s infinite;
+}
+.motion-bar1b {
+  display: inline-block;
+  white-space: nowrap;
+  animation: moveWords1b 60s linear 10s infinite;
+}
+
+.motion-bar2a {
+  display: inline-block;
+  white-space: nowrap;
+  animation: moveWords1a 60s linear -20s infinite;
+  animation-direction: reverse;
+}
+.motion-bar2b {
+  display: inline-block;
+  white-space: nowrap;
+  animation: moveWords1b 60s linear 10s infinite;
+  animation-direction: reverse;
+}
+
+
+@keyframes moveWords1a {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  } 
+  100% {
+    transform: translate3d(100%, 0, 0) translate3d(-200%, 0, 0);
+  }
+}
+
+@keyframes moveWords1b {
+  0% {
+    transform: translate3d(100%, 0, 0) translate3d(-100%, 0, 0);
+  } 
+  100% {
+    transform: translate3d(100%, 0, 0) translate3d(-300%, 0, 0);
+  }
+}
+
+
