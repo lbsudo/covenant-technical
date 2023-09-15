@@ -1,26 +1,30 @@
 "use client"
 import React from 'react'
-import { Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/react"
+import { useTheme as ThemeContext, } from 'next-themes'
 
 export default function HomeTechnologies() {
+  const { resolvedTheme } = ThemeContext();
+  const imageColor = resolvedTheme === 'dark' ? 'white' : 'black';
 
-  const Wordpress = "https://cdn.simpleicons.org/Wordpress/white";
-  const Drupal = "https://cdn.simpleicons.org/drupal/white";
-  const Magento = "https://cdn.simpleicons.org/magento/white";
-  const Sitecore = "https://cdn.simpleicons.org/sitecore/white";
-  const Squarespace = "https://cdn.simpleicons.org/squarespace/white";
-  const Bc = "https://cdn.simpleicons.org/bigcommerce/white";
-  const Shopify = "https://cdn.simpleicons.org/shopify/white";
-  const Contentful = "https://cdn.simpleicons.org/contentful/white";
-  const Webflow = "https://cdn.simpleicons.org/webflow/white";
-  const Microsoft = "https://cdn.simpleicons.org/microsoft/white";
-  const Ibm = "https://cdn.simpleicons.org/ibm/white";
-  const Linux = "https://cdn.simpleicons.org/linux/white";
+
+  const Wordpress = `https://cdn.simpleicons.org/Wordpress/${imageColor}`;
+  const Drupal = `https://cdn.simpleicons.org/drupal/${imageColor}`;
+  const Magento = `https://cdn.simpleicons.org/magento/${imageColor}`;
+  const Sitecore = `https://cdn.simpleicons.org/sitecore/${imageColor}`;
+  const Squarespace = `https://cdn.simpleicons.org/squarespace/${imageColor}`;
+  const Bc = `https://cdn.simpleicons.org/bigcommerce/${imageColor}`;
+  const Shopify = `https://cdn.simpleicons.org/shopify/${imageColor}`;
+  const Contentful = `https://cdn.simpleicons.org/contentful/${imageColor}`;
+  const Webflow = `https://cdn.simpleicons.org/webflow/${imageColor}`;
+  const Microsoft = `https://cdn.simpleicons.org/microsoft/${imageColor}`;
+  const Ibm = `https://cdn.simpleicons.org/ibm/${imageColor}`;
+  const Linux = `https://cdn.simpleicons.org/linux/${imageColor}`;
 
   return (
     <>
-      <h2 className='bg-black text-white text-4xl text-center py-10 flex justify-center items-center'>PLATFORMS WE WORK WITH</h2>
-      <div className='bg-black flex justify-center items-center pb-8'>
+      <h2 className='bg-background text-foreground text-4xl text-center py-10 flex justify-center items-center'>PLATFORMS WE WORK WITH</h2>
+      <div className='bg-background flex justify-center items-center pb-8 mb-8'>
         <div className='w-4/5 grid grid-cols-2 md:grid-cols-4 gap-10 gap-x-0 md:gap-10'>
           <div className='flex justify-center items-center'>
             <Image alt="wordpress" src={Wordpress} className='h-20 w-20' height={150} width={150} />

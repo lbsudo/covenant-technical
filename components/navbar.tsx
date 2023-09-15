@@ -28,7 +28,7 @@ export const Navbar = () => {
   const pathname = usePathname()
 
   return (
-    <NextUINavbar maxWidth="xl" shouldHideOnScroll position="sticky">
+    <NextUINavbar className="bg-zinc-800/20" maxWidth="xl" shouldHideOnScroll position="sticky">
       <NavbarBrand as="li" className="gap-3 max-w-fit">
         <NextLink className="flex justify-start items-center gap-1" href="/">
           <Logo />

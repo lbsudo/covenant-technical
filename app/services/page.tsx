@@ -1,4 +1,4 @@
-import AllServices from "@/components/AllServices";
+import HomeTechnologies from "@/components/HomeTechnologies";
 import TechServices from "@/components/TechServices";
 
 export default function ServicesPage() {
@@ -14,7 +14,7 @@ export default function ServicesPage() {
         <TechServices />
       </section>
       <section className="w-full">
-        <AllServices />
+        <HomeTechnologies />
       </section>
     </div>
   );

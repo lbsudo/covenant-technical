@@ -11,7 +11,7 @@ export default function OurApproach() {
           <p className='text-lg mt-4 pb-8'>With a proven track record of successfully delivering high-quality web design solutions to a diverse range of clients, we’ve earned a reputation for reliability, professionalism and exceeding client expectations.</p>
         </div>
         <div className='flex flex-col w-full justify-center items-center text-xl pb-12'>
-          <Image src={Process} alt={'/'} height={500} width={250} />
+          <Image priority src={Process} alt={'/'} height={500} width={250} />
         </div>
       </div>
     </>

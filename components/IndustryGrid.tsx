@@ -8,69 +8,71 @@ export default function IndustryGrid() {
     {
       title: "Trades & Services",
       img: "/industries/trades.jpg",
-      href: "/"
+      href: "/industries/trades-&-services"
     },
     {
       title: "Retail & eCommerce",
       img: "/industries/retail.jpg",
-      href: "/"
+      href: "/industries/retail-&-ecommerce"
     },
     {
       title: "Manufacturing",
       img: "/industries/manufacturing.jpg",
-      href: "/"
+      href: "/industries/manufacturing"
     },
     {
       title: "Tech & Saas",
       img: "/industries/tech.jpg",
-      href: "/"
+      href: "/industries/tech-&-saas"
     },
     {
       title: "Oil & Gas",
       img: "/industries/oil.jpg",
-      href: "/"
+      href: "/industries/oil-&-gas"
     },
     {
       title: "Travel",
       img: "/industries/travel.jpg",
-      href: "/"
+      href: "/industries/travel"
     },
     {
       title: "Healthcare",
       img: "/industries/healthcare.jpg",
-      href: "/"
+      href: "/industries/healthcare"
     },
     {
       title: "Banking & Finance",
       img: "/industries/banking.jpg",
-      href: "/"
+      href: "/industries/banking-&-finance"
     },
     {
       title: "Education",
       img: "/industries/education.jpg",
-      href: "/"
+      href: "/industries/education"
     },
   ];
 
   return (
     <div className="mx-8 gap-2 grid grid-cols-2 sm:grid-cols-4">
       {list.map((item, index) => (
-        <Card shadow="sm" key={index} >
+        <Card shadow="sm" isPressable key={index} >
           <CardBody className="overflow-visible p-0">
-            <Image
-              shadow="sm"
-              radius="lg"
-              width="100%"
-              alt={item.title}
-              className="w-full object-cover h-[200px]"
-              src={item.img}
-            />
+            <Link href={item.href}>
+              <Image
+                shadow="sm"
+                radius="lg"
+                width="100%"
+                alt={item.title}
+                className="w-full object-cover h-[200px]"
+                src={item.img}
+              />
+            </Link>
           </CardBody>
-          <CardFooter className="text-small justify-between">
-            {/* <Link href={item.href}> */}
-            <b>{item.title}</b>
-            {/* </Link> */}
-          </CardFooter>
+          <Link href={item.href}>
+            <CardFooter className="text-small justify-between">
+              <b>{item.title}</b>
+            </CardFooter>
+          </Link>
         </Card>
       ))}
     </div>

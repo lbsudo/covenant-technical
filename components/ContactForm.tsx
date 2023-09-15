@@ -41,7 +41,7 @@ export default function ContactForm() {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:3001/send-email', formData); // Updated URL
+      await axios.post('/api/send-email', formData); // Updated URL
       console.log("Email sent successfully");
     } catch (error) {
       console.error("Error sending email:", error);
@@ -67,7 +67,7 @@ export default function ContactForm() {
         {/* Add other input fields and select with name attributes */}
         <div className="flex w-full flex-wrap md:flex-nowrap gap-2">
           <Input type="text" name="email" aria-label="Email" placeholder="Enter your email" value={formData.email} onChange={handleChange} />
-          <Input type="tel" name="phoneNumber" aria-label="Phone Number" placeholder="Phone Number" value={formData.phoneNumber} onChange={handleChange} />
+          <Input type="text" name="phoneNumber" aria-label="Phone Number" placeholder="Phone Number" value={formData.phoneNumber} onChange={handleChange} />
         </div>
         <Textarea
           placeholder="How can we help?"
