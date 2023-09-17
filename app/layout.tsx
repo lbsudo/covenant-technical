@@ -7,6 +7,7 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import clsx from "clsx";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: {
@@ -39,6 +40,7 @@ export default function RootLayout({
           fontRoboto.variable
         )}
       >
+        <Toaster position="bottom-center" toastOptions={{ duration: 3000 }} />
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
@@ -49,6 +51,6 @@ export default function RootLayout({
           </div>
         </Providers>
       </body>
-    </html>
+    </html >
   );
 }

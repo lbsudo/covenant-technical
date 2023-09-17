@@ -5,6 +5,7 @@ import { Textarea } from "@nextui-org/react";
 import { Select, SelectItem } from "@nextui-org/react";
 import { baseButton } from "@/components/primitives";
 import { Button } from "@nextui-org/button";
+import { toast } from "react-hot-toast"
 import axios from 'axios';
 
 interface FormData {
@@ -43,6 +44,15 @@ export default function ContactForm() {
     try {
       await axios.post('/api/send-email', formData); // Updated URL
       console.log("Email sent successfully");
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phoneNumber: '',
+        message: '',
+        funnel: '',
+      });
+      toast.success("Email sent successfully");
     } catch (error) {
       console.error("Error sending email:", error);
     }
