@@ -1,38 +1,22 @@
-import sgMail from '@sendgrid/mail';
-import type { NextApiResponse, NextApiRequest } from "next";
-import { NextResponse } from "next/server";
+import { EmailTemplate } from '../../../components/EmailTemplate'
+import { NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
-// Initialize SendGrid API key
-sgMail.setApiKey(`${process.env.SENDGRID_API_KEY}`);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-
-export async function POST(req: Request, res: NextApiResponse) {
-  const { firstName, lastName, email, phoneNumber, message, funnel } = await req.json();
-
-  const msg = {
-    to: 'currencycovenant@gmail.com', // Replace with your email address
-    from: 'covenantinquiry@mail.com', // Replace with your SendGrid verified sender email
-    subject: 'New Contact Form Submission',
-    html: `
-      <p><strong>First Name:</strong> ${firstName}</p>
-      <p><strong>Last Name:</strong> ${lastName}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone Number:</strong> ${phoneNumber}</p>
-      <p><strong>Message:</strong> ${message}</p>
-      <p><strong>How did you hear about us?</strong> ${funnel}</p>
-    `,
-  };
-
-  const response = sgMail
-    .send(msg)
-    .then(() => {
-      res.status(200).send('Email sent successfully');
-    })
-    .catch((error) => {
-      console.error(error);
-      res.status(500).send('Error sending email');
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+    const { firstName, lastName, email, phoneNumber, message, funnel } = body;
+    const data = await resend.emails.send({
+      from: `${process.env.EMAIL_USER}`,
+      to: `${process.env.EMAIL_USER}`,
+      subject: `Contact Form From ${firstName} ${lastName}`,
+      react: EmailTemplate({ firstName, lastName, email, phoneNumber, message, funnel }),
     });
-  const received = response;
-  return NextResponse.json(received);
-}
 
+    return NextResponse.json(data);
+  } catch (error) {
+    return NextResponse.json({ error });
+  }
+}

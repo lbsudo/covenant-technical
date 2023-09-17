@@ -15,8 +15,7 @@ export default function Footer() {
       <div className='text-lg flex flex-col justify-center items-center'>
         <div className='flex justify-between items-center w-11/12'>
           <div className='flex flex-col'>
-            <p>760-605-1311</p>
-            <p className='hidden md:block'>contact@covenantTech.com</p>
+            <p className='hidden md:block'>contact@currencycovenant.com</p>
           </div>
           <Link href="/contact">
             <Button
