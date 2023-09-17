@@ -1,17 +1,19 @@
 import React from "react";
-import getPostMetadata from "@/utils/getPostMetadata";
 import PreviewSkeleton from "./PreviewSkeleton";
-import { PostMetadata } from "@/types";
+import { Post } from "@/app/lib/interface";
 
-export default function InsightPost() {
-  const postMetadata: PostMetadata[] = getPostMetadata();
+interface InsightPostProps {
+  data: Post[];
+}
 
+
+export default function InsightPost({ data }: InsightPostProps) {
+  // const data = (await getData()) as Post[];
   return (
     <div>
       <section className="w-full">
-        <PreviewSkeleton list={postMetadata} />
+        <PreviewSkeleton list={data} />
       </section>
     </div>
   );
-}
-;
+};

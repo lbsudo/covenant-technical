@@ -1,6 +1,12 @@
 import InsightPost from "@/components/InsightPost";
+// import { client } from "@/app/lib/sanity";
+import { Post } from "@/app/lib/interface";
+import { getPosts } from "@/sanity/sanity-utils";
 
-export default function BlogPage() {
+
+export default async function BlogPage({ }) {
+  // const postData = (await getData()) as Post[];
+  const postData = (await getPosts()) as Post[];
   return (
     <div>
       <section className='py-32 mb-16 flex justify-center flex-col w-full bg-cover bg-no-repeat bg-top z-0' style={{ backgroundImage: `url('/keys.jpg')` }}>
@@ -10,7 +16,7 @@ export default function BlogPage() {
         </div>
       </section>
       <section>
-        <InsightPost />
+        <InsightPost data={postData} />
       </section>
     </div>
   );

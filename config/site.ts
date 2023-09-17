@@ -24,10 +24,10 @@ export const siteConfig = {
       label: "Industries",
       href: "/industries",
     },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
+    // {
+    //   label: "Blog",
+    //   href: "/blog",
+    // },
   ],
   navMenuItems: [
     {
@@ -50,10 +50,10 @@ export const siteConfig = {
       label: "Industries",
       href: "/industries",
     },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
+    // {
+    //   label: "Blog",
+    //   href: "/blog",
+    // },
     {
       label: "Contact",
       href: "/contact",
