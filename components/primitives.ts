@@ -13,6 +13,18 @@ export const baseButton = tv({
   }
 });
 
+export const contactButton = tv({
+  base: "font-semibold border-2 text-md border-white text-white py-5 px-8 hover:border-primary hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
+  variants: {
+    color: {
+      primary: "bg-primary hover:bg-white",
+      secondary: "bg-purple-500 hover:bg-purple-700",
+      success: "bg-green-500 hover:bg-green-700",
+      error: "bg-red-500 hover:bg-red-700",
+    },
+  }
+});
+
 export const footerButton = tv({
   base: "font-semibold border-2 text-sm  lg:text-lg border-white text-white lg:py-1 lg:px-3 p-1 hover:border-primary hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
   variants: {
@@ -48,6 +60,7 @@ export const ctaButton = tv({
     },
   }
 });
+
 
 export const title = tv({
   base: "tracking-tight inline font-semibold",

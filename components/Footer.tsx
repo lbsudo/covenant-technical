@@ -17,7 +17,7 @@ export default function Footer() {
           <div className='flex flex-col'>
             <p className='hidden md:block'>contact@currencycovenant.com</p>
           </div>
-          <Link href="https://calendly.com/currencycovenant/free-consultation-call">
+          <Link href="https://calendly.com/currencycovenant/free-consultation-call" target='_blank'>
             <Button
               color="secondary"
               className={footerButton({ color: 'primary' })}

@@ -1,6 +1,3 @@
-"use client"
-import { useEffect, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
 import HomeCta from "@/components/HomeCta";
 import MotionBar from "@/components/MotionBar";
 import TechServices from "@/components/TechServices";
@@ -12,13 +9,7 @@ import HomeHero from '@/components/HomeHero';
 
 export default function Home() {
 
-  const controls = useAnimation();
 
-  useEffect(() => {
-    // Animate the div in the first section when the page loads
-    controls.start({ opacity: 1, y: 0, transition: { duration: 1 } });
-    // Fetch post metadata from the API route
-  }, [controls]);
 
   return (
     <div>

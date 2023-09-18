@@ -7,12 +7,12 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { firstName, lastName, email, phoneNumber, message, funnel } = body;
+    const { firstNameLastName, email, phoneNumber, companyName, websiteUrl, message, funnel } = body;
     const data = await resend.emails.send({
       from: `${process.env.EMAIL_USER}`,
       to: `${process.env.EMAIL_USER}`,
-      subject: `Contact Form From ${firstName} ${lastName}`,
-      react: EmailTemplate({ firstName, lastName, email, phoneNumber, message, funnel }),
+      subject: `Contact Form From ${firstNameLastName} `,
+      react: EmailTemplate({ firstNameLastName, email, phoneNumber, companyName, websiteUrl, message, funnel }),
     });
 
     return NextResponse.json(data);
