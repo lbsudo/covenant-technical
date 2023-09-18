@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { baseButton } from "./primitives";
+import { footerButton } from "./primitives";
 import { Input } from "@nextui-org/react";
 import { Checkbox } from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
@@ -55,13 +55,13 @@ export default function EmailListSub() {
           onChange={(e) => setEmail(e.target.value)}
         />
         <Checkbox
-          className='text-center mt-1'
+          className='text-center text-sm mt-1'
           checked={isChecked}
           onChange={() => setIsChecked(!isChecked)}
         >
           <span className='text-red-500'>*</span>I have read the Privacy Policy and agree to its terms.
         </Checkbox>
-        <Button color="secondary" variant="ghost" className={baseButton({ color: 'primary' })} type="submit">
+        <Button color="secondary" variant="ghost" className={footerButton({ color: 'primary' })} type="submit">
           Subscribe
         </Button>
       </form>

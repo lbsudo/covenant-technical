@@ -2,10 +2,22 @@ import { tv } from "tailwind-variants";
 
 
 export const baseButton = tv({
-  base: "font-semibold border-2 text-lg border-white text-white py-1 px-3 hover:border-purple-500 hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
+  base: "font-semibold border-2 text-lg border-white text-white py-1 px-3 hover:border-primary hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
   variants: {
     color: {
-      primary: "bg-purple-500 hover:bg-white",
+      primary: "bg-primary hover:bg-white",
+      secondary: "bg-purple-500 hover:bg-purple-700",
+      success: "bg-green-500 hover:bg-green-700",
+      error: "bg-red-500 hover:bg-red-700",
+    },
+  }
+});
+
+export const footerButton = tv({
+  base: "font-semibold border-2 text-sm  lg:text-lg border-white text-white lg:py-1 lg:px-3 p-1 hover:border-primary hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
+  variants: {
+    color: {
+      primary: "bg-primary hover:bg-white",
       secondary: "bg-purple-500 hover:bg-purple-700",
       success: "bg-green-500 hover:bg-green-700",
       error: "bg-red-500 hover:bg-red-700",
@@ -14,10 +26,10 @@ export const baseButton = tv({
 });
 
 export const largeButton = tv({
-  base: "font-semibold rounded-full border-2 border-white text-white py-10 px-10 text-4xl hover:border-purple-500 hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
+  base: "font-semibold rounded-full border-2 border-white text-white px-2 py-2 md:py-5 md:px-5 lg:py-10 lg:px-10 text-md md:text-lg lg:text-4xl hover:border-primary hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
   variants: {
     color: {
-      primary: "bg-purple-500 hover:bg-white",
+      primary: "bg-primary hover:bg-white",
       secondary: "bg-purple-500 hover:bg-purple-700",
       success: "bg-green-500 hover:bg-green-700",
       error: "bg-red-500 hover:bg-red-700",
@@ -26,10 +38,10 @@ export const largeButton = tv({
 });
 
 export const ctaButton = tv({
-  base: "font-semibold rounded-full border-2 border-white text-white py-10 px-10 text-6xl hover:border-purple-500 hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
+  base: "font-semibold rounded-full border-2 border-white text-white py-10 px-10 text-6xl hover:border-primary hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
   variants: {
     color: {
-      primary: "bg-purple-500 hover:bg-white",
+      primary: "bg-primary hover:bg-white",
       secondary: "bg-purple-500 hover:bg-purple-700",
       success: "bg-green-500 hover:bg-green-700",
       error: "bg-red-500 hover:bg-red-700",

@@ -1,11 +1,34 @@
+import React from "react"
 import Link from "next/link";
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 
 export default function AboutBar() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  // Define the animation properties
+  const animationVariants = {
+    hidden: { opacity: 0, y: 30 }, // Start hidden below and with 0 opacity
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } }, // End visible with 1 opacity
+  };
+
+  // Animate when the element is in view
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+
   return (
     <>
-      <div className="bg-purple-500 py-6 w-full">
-        <ul className="text-white overflow-x-auto whitespace-nowrap flex flex-row justify-between items-center text-sm md:text-xl md:mx-16 lg:text-3xl  ">
+      <motion.div className="bg-purple-500 py-6 w-full"
+        initial="hidden"
+        animate={controls}
+        variants={animationVariants}>
+        <ul className="text-white overflow-x-auto whitespace-nowrap flex flex-row justify-between items-center text-sm md:text-xl md:mx-16 lg:text-3xl  " ref={ref}>
           <Link href={'#exp'} className="transition-all delay-0 duration-1000 ease-in-out hover:underline hover:underline-offset-4">
             <li>Our Expertise</li>
           </Link>
@@ -22,7 +45,7 @@ export default function AboutBar() {
             <li>Our Strengths</li>
           </Link>
         </ul>
-      </div>
+      </motion.div>
     </>
   )
 }

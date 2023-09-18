@@ -39,7 +39,7 @@ export const Navbar = () => {
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
-                className={`${pathname === item.href ? 'text-purple-500 data-[active=true]:font-medium hover:underline hover:underline-white hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)] ' : 'data-[active=true]:font-medium hover:underline hover:underline-white hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]'
+                className={`${pathname === item.href ? 'text-primary data-[active=true]:font-medium hover:underline hover:underline-white hover:drop-shadow-[0_8px_8px_rgba(96,42,242,1)] ' : 'data-[active=true]:font-medium hover:underline hover:underline-white hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]'
                   }`}
                 color="foreground"
                 href={item.href}

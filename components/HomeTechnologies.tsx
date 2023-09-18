@@ -1,9 +1,30 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Image } from "@nextui-org/react"
 import { useTheme as ThemeContext, } from 'next-themes'
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 export default function HomeTechnologies() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  // Define the animation properties
+  const animationVariants = {
+    hidden: { opacity: 0, y: 30 }, // Start hidden below and with 0 opacity
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } }, // End visible with 1 opacity
+  };
+
+  // Animate when the element is in view
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+
+
+
   const { resolvedTheme } = ThemeContext();
   const imageColor = resolvedTheme === 'dark' ? 'white' : 'black';
 
@@ -21,11 +42,19 @@ export default function HomeTechnologies() {
   const Ibm = `https://cdn.simpleicons.org/ibm/${imageColor}`;
   const Linux = `https://cdn.simpleicons.org/linux/${imageColor}`;
 
+
   return (
-    <>
-      <h2 className='bg-background text-foreground text-4xl text-center py-10 flex justify-center items-center'>PLATFORMS WE WORK WITH</h2>
+    <motion.div
+      initial="hidden"
+      animate={controls}
+      variants={animationVariants}
+      ref={ref} >
+      <h2 className='bg-background text-foreground text-4xl text-center py-10 flex justify-center items-center' >PLATFORMS WE WORK WITH</h2>
       <div className='bg-background flex justify-center items-center pb-8 mb-8'>
-        <div className='w-4/5 grid grid-cols-2 md:grid-cols-4 gap-10 gap-x-0 md:gap-10'>
+        <motion.div className='w-4/5 grid grid-cols-2 md:grid-cols-4 gap-10 gap-x-0 md:gap-10'
+          initial="hidden"
+          animate={controls}
+          variants={animationVariants}>
           <div className='flex justify-center items-center'>
             <Image alt="wordpress" src={Wordpress} className='h-20 w-20' height={150} width={150} />
           </div>
@@ -62,8 +91,8 @@ export default function HomeTechnologies() {
           <div className='flex justify-center items-center'>
             <Image alt="styled-components" src={Linux} className='h-20 w-20' height={150} width={150} />
           </div>
-        </div>
+        </motion.div>
       </div>
-    </>
+    </motion.div >
   )
 }

@@ -3,8 +3,28 @@ import React from 'react'
 import { Image } from "@nextui-org/react";
 import { useTheme as ThemeContext, } from 'next-themes'
 import { FaCode } from "react-icons/fa6";
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 export default function AllServices() {
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  // Define the animation properties
+  const animationVariants = {
+    hidden: { opacity: 0, y: 30 }, // Start hidden below and with 0 opacity
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } }, // End visible with 1 opacity
+  };
+
+  // Animate when the element is in view
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+
 
   const { resolvedTheme } = ThemeContext();
   const imageColor = resolvedTheme === 'dark' ? 'ffffff' : '000000';
@@ -28,8 +48,11 @@ export default function AllServices() {
 
   return (
     <>
-      <div className='bg-background text-foreground pb-12'>
-        <h2 className='text-4xl text-center py-10 flex justify-center items-center'>PLATFORMS WE WORK WITH</h2>
+      <motion.div className='bg-background text-foreground pb-12'
+        initial="hidden"
+        animate={controls}
+        variants={animationVariants}>
+        <h2 className='text-4xl text-center py-10 flex justify-center items-center' ref={ref}>PLATFORMS WE WORK WITH</h2>
         <div className='flex justify-center items-center mx-4'>
           <div className='text-center h-full w-full grid grid-cols-2 md:grid-cols-4 gap-10 '>
 
@@ -102,7 +125,7 @@ export default function AllServices() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }

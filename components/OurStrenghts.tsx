@@ -1,16 +1,37 @@
 "use client"
 import React from 'react'
 import { Accordion, AccordionItem } from "@nextui-org/react";
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 export default function OurStrengths() {
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  // Define the animation properties
+  const animationVariants = {
+    hidden: { opacity: 0, y: 30 }, // Start hidden below and with 0 opacity
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } }, // End visible with 1 opacity
+  };
+
+  // Animate when the element is in view
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
 
   const itemClasses = {
     title: "font-normal text-3xl",
   };
 
   return (
-    <>
-      <div className='flex justify-center items-center'>
+    <motion.div
+      initial="hidden"
+      animate={controls}
+      variants={animationVariants}>
+      <div className='flex justify-center items-center' ref={ref}>
         <div className='text-foreground text-2xl text-left w-full flex flex-col justify-center mx-4 pb-1'>
           <h2 className='text-4xl py-4 w-full'>Covenant Cyber Strengths</h2>
           <p className='w-full pb-6 text-light xl:text-md'>Communication, collaboration, adaption: Dotlogics is committed to consistently delivering projects on time, within budget, and exceeding client expectations. Our expensive portfolio showcases our versatility and expertise across different industries to testify to our success.</p>
@@ -27,7 +48,7 @@ export default function OurStrengths() {
           With a global team spanning across continents, our diverse and talented professionals collaborate seamlessly to leverage their expertise and cultural insights, ensuring that our clients receive unparalleled support and solutions. We believe in the power of diversity, fostering an inclusive environment that encourages innovative thinking and drives success on a global scale.
         </AccordionItem>
       </Accordion>
-    </>
+    </motion.div>
   )
 
 }

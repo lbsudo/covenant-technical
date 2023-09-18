@@ -1,15 +1,15 @@
 "use client"
 import React from 'react'
 import Link from 'next/link'
-import { baseButton } from "./primitives";
+import { footerButton } from "./primitives";
 import { Button } from "@nextui-org/react";
 import EmailListSub from './EmailListSub';
 
 export default function Footer() {
   return (
     <>
-      <div className=' flex flex-col items-center justify-center mt-1 pb-4 border-t-2 '>
-        <h2 className='text-5xl font-bold mb-6 pt-4'>Keep In Touch</h2>
+      <div className=' flex flex-col items-center justify-center  pb-4 border-t-2 '>
+        <h2 className='text-2xl lg:text-4xl font-bold mb-6 pt-2'>Keep In Touch</h2>
         <EmailListSub />
       </div>
       <div className='text-lg flex flex-col justify-center items-center'>
@@ -17,10 +17,10 @@ export default function Footer() {
           <div className='flex flex-col'>
             <p className='hidden md:block'>contact@currencycovenant.com</p>
           </div>
-          <Link href="/contact">
+          <Link href="https://calendly.com/currencycovenant/free-consultation-call">
             <Button
               color="secondary"
-              className={baseButton({ color: 'primary' })}
+              className={footerButton({ color: 'primary' })}
               variant="ghost"
             >
               BOOK A CALL

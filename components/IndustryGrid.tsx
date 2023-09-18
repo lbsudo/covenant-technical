@@ -2,8 +2,26 @@
 import React from "react";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import Link from "next/link";
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 export default function IndustryGrid() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  // Define the animation properties
+  const animationVariants = {
+    hidden: { opacity: 0, y: 30 }, // Start hidden below and with 0 opacity
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } }, // End visible with 1 opacity
+  };
+
+  // Animate when the element is in view
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
   const list = [
     {
       title: "Trades & Services",
@@ -53,7 +71,11 @@ export default function IndustryGrid() {
   ];
 
   return (
-    <div className="mx-8 gap-2 grid grid-cols-2 sm:grid-cols-4">
+    <motion.div className="mx-8 gap-2 grid grid-cols-2 sm:grid-cols-4"
+      initial="hidden"
+      animate={controls}
+      variants={animationVariants}
+      ref={ref}>
       {list.map((item, index) => (
         <Card shadow="sm" isPressable key={index} >
           <CardBody className="overflow-visible p-0">
@@ -75,6 +97,6 @@ export default function IndustryGrid() {
           </Link>
         </Card>
       ))}
-    </div>
+    </motion.div>
   );
 }
