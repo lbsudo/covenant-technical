@@ -19,8 +19,7 @@ export default function HomeHero() {
 
 
   return (
-    <div
-    >
+    <>
       <video
         autoPlay
         loop
@@ -32,13 +31,13 @@ export default function HomeHero() {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
-        className="relative inset-0 flex flex-col h-full justify-center items-center text-white"
+        className="relative inset-0 flex flex-col h-full items-center justify-center text-white"
       >
-        <h1 className="text-5xl lg:text-8xl text-center w-full lg:w-1/2 h-auto pt-36 pb-6">
+        <h1 className="text-3xl lg:text-6xl w-full lg:w-1/2 h-auto pt-12 pb-4  lg:pb-6 text-center">
           Design & <span className="underline decoration-white">Growth</span>
         </h1>
-        <h4 className="text-lg lg:text-2xl text-center lg:text-left w-full lg:w-1/3 h-auto pb-12 ">
-          We craft web platforms and user experices to help businesses attract and convert their ideal clients and boost performance.
+        <h4 className="text-sm lg:text-lg w-full lg:w-1/2 h-auto pb-6 lg:pb-12 text-center">
+          We craft web platforms and user experiences to help businesses attract and convert their ideal clients and boost performance.
         </h4>
         <Link href="/contact">
           <Button
@@ -50,6 +49,6 @@ export default function HomeHero() {
           </Button>
         </Link>
       </motion.div>
-    </div>
+    </>
   )
 }

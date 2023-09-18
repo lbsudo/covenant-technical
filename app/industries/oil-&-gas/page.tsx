@@ -3,6 +3,7 @@ import React from 'react';
 import IndustryCta from "@/components/IndustryCta";
 import IndustryInfo from "@/components/IndustryInfo";
 import { motion, useAnimation } from 'framer-motion'
+import Image from 'next/image';
 
 export default function IndustriesPage() {
 
@@ -33,12 +34,23 @@ export default function IndustriesPage() {
 
   return (
     <div>
-      <section className='py-32 mb-12 flex justify-center w-full flex-col bg-cover bg-no-repeat bg-center relative' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/oilcover.jpg')` }}>
-        <motion.div className='w-full text-white flex flex-col justify-center items-center relative z-10'
+      <section className='py-40 flex justify-center flex-col w-full relative z-0' >
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src="/oilcover.jpg"
+            alt="Background Image"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black via-black to-black opacity-50"></div>
+        <motion.div className='relative w-full text-white flex flex-col justify-center items-center '
           initial={{ opacity: 0, y: 50 }}
-          animate={controls}>
-          <h1 className='text-4xl md:text-6xl w-3/4 h-1/2 text-center mt-8'>Oil and Gas Development Solutions</h1>
-          <h4 className='text-2xl md:text-4xl w-3/4 h-1/4 mt-16 mb-16 text-center'>Applying SAP Capabilities that Cover the Landscape and the needs of the industries</h4>
+          animate={controls}
+        >
+          <h1 className='text-5xl lg:text-6xl w-3/4 h-1/2 text-center mt-8'>Oil and Gas Development Solutions</h1>
+          <h4 className='text-4xl w-3/4 h-1/4 mt-16 mb-16 text-center'>Applying software capabilities that cover the landscape and the needs of the industries that keep our communities powered and running.</h4>
         </motion.div>
       </section>
       <section>

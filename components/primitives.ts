@@ -15,7 +15,7 @@ export const baseButton = tv({
 
 
 export const heroButton = tv({
-  base: "font-semibold border-2 text-lg lg:text-4xl border-white text-white py-1 px-3 lg:p-8 hover:border-primary hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
+  base: "font-semibold border-2 text-lg lg:text-2xl border-white text-white py-1 px-3 lg:p-6 hover:border-primary hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
   variants: {
     color: {
       primary: "bg-primary hover:bg-white",

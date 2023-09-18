@@ -28,6 +28,7 @@ export default function AboutPage() {
             alt="Background Image"
             layout="fill"
             objectFit="cover"
+            priority
           />
         </div>
         <motion.div className='relative w-full text-white flex flex-col justify-center items-center '

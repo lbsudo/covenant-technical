@@ -71,7 +71,7 @@ export default function IndustryGrid() {
   ];
 
   return (
-    <motion.div className="mx-8 gap-2 grid grid-cols-2 sm:grid-cols-4"
+    <motion.div className="mx-8 pt-12 gap-2 grid grid-cols-2 sm:grid-cols-4"
       initial="hidden"
       animate={controls}
       variants={animationVariants}
@@ -87,6 +87,7 @@ export default function IndustryGrid() {
                 alt={item.title}
                 className="w-full object-cover h-[200px]"
                 src={item.img}
+
               />
             </Link>
           </CardBody>

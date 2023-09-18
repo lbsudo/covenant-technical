@@ -34,7 +34,7 @@ export default function IndustryInfo({ Title, Img, Offerings }: Props) {
       animate={controls}
       variants={animationVariants}
       ref={ref}>
-      <h2 className='text-foreground text-3xl md:text-5xl font-semibold text-center mb-6'>{Title}</h2>
+      <h2 className='text-foreground text-3xl md:text-5xl font-semibold text-center mb-6 pt-12'>{Title}</h2>
       <div className='flex flex-col items-center md:flex-row md:items-start mx-6 md:mx-28 pb-8 mb-8'>
         <div className='w-full md:w-1/2 flex justify-center items-center md:mr-4 xl:mr-0 md:mt-6'>
           <Image src={Img} alt='Industry Image' height={800} width={400} priority />
