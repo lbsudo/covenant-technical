@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion'
 import { Button } from '@nextui-org/button';
 import { Link } from '@nextui-org/link';
-import { baseButton } from './primitives';
+import { heroButton } from './primitives';
 
 
 export default function HomeHero() {
@@ -32,9 +32,9 @@ export default function HomeHero() {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
-        className="relative inset-0 flex flex-col h-full justify-start items-center text-white"
+        className="relative inset-0 flex flex-col h-full justify-center items-center text-white"
       >
-        <h1 className="text-6xl lg:text-8xl text-center w-full h-auto pt-36 pb-6">
+        <h1 className="text-5xl lg:text-8xl text-left w-full lg:w-1/2 h-auto pt-36 pb-6">
           Design & <span className="underline decoration-white">Growth</span>
         </h1>
         <h4 className="text-lg lg:text-2xl text-center lg:text-left w-full lg:w-1/2 h-auto pb-12 ">
@@ -43,7 +43,7 @@ export default function HomeHero() {
         <Link href="/contact">
           <Button
             color="secondary"
-            className={baseButton({ color: 'primary' })}
+            className={heroButton({ color: 'primary' })}
             variant="ghost"
           >
             Book a Free Discovery Call
