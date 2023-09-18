@@ -20,7 +20,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <section className='py-32 flex justify-center flex-col w-full bg-cover bg-no-repeat bg-top z-0' style={{ backgroundImage: `url('/wrld.jpg')` }}>
+      <section className='py-40 flex justify-center flex-col w-full bg-cover bg-no-repeat bg-top z-0' style={{ backgroundImage: `url('/wrld.jpg')` }}>
         <motion.div className='relative w-full text-white flex flex-col justify-center items-center '
           initial={{ opacity: 0, y: 50 }}
           animate={controls}

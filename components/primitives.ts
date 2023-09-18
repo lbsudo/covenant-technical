@@ -38,7 +38,7 @@ export const largeButton = tv({
 });
 
 export const ctaButton = tv({
-  base: "font-semibold rounded-full border-2 border-white text-white py-10 px-10 text-6xl hover:border-primary hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
+  base: "font-semibold rounded-full border-2 border-white text-white py-5 px-5 text-4xl hover:border-primary hover:bg-white hover:text-black hover:drop-shadow-[0_8px_8px_rgba(93,63,211,1)]",
   variants: {
     color: {
       primary: "bg-primary hover:bg-white",

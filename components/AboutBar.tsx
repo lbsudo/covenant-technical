@@ -24,11 +24,9 @@ export default function AboutBar() {
 
   return (
     <>
-      <motion.div className="bg-purple-500 py-6 w-full"
-        initial="hidden"
-        animate={controls}
-        variants={animationVariants}>
-        <ul className="text-white overflow-x-auto whitespace-nowrap flex flex-row justify-between items-center text-sm md:text-xl md:mx-16 lg:text-3xl  " ref={ref}>
+      <div className="bg-purple-500 py-6 w-full"
+      >
+        <ul className="text-white overflow-x-auto whitespace-nowrap flex flex-row justify-between items-center text-sm md:text-xl md:mx-16 lg:text-3xl  " >
           <Link href={'#exp'} className="transition-all delay-0 duration-1000 ease-in-out hover:underline hover:underline-offset-4">
             <li>Our Expertise</li>
           </Link>
@@ -45,7 +43,7 @@ export default function AboutBar() {
             <li>Our Strengths</li>
           </Link>
         </ul>
-      </motion.div>
+      </div>
     </>
   )
 }
