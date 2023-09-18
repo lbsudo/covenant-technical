@@ -22,11 +22,21 @@ export default function HomeTechnologies() {
     }
   }, [controls, inView]);
 
+  const [isMounted, setIsMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
 
 
 
   const { resolvedTheme } = ThemeContext();
-  const imageColor = resolvedTheme === 'dark' ? 'white' : 'black';
+  const imageColor = resolvedTheme === 'dark' ? 'FFFFFF' : '000000';
 
 
   const Wordpress = `https://cdn.simpleicons.org/Wordpress/${imageColor}`;
@@ -47,14 +57,14 @@ export default function HomeTechnologies() {
     <motion.div
       initial="hidden"
       animate={controls}
-      variants={animationVariants}
-      ref={ref} >
-      <h2 className='bg-background text-foreground text-4xl text-center py-10 flex justify-center items-center' >PLATFORMS WE WORK WITH</h2>
+      variants={animationVariants} >
+      <h2 className='bg-background text-foreground text-4xl text-center py-10 flex justify-center items-center' ref={ref} >PLATFORMS WE WORK WITH</h2>
       <div className='bg-background flex justify-center items-center pb-8 mb-8'>
         <motion.div className='w-4/5 grid grid-cols-2 md:grid-cols-4 gap-10 gap-x-0 md:gap-10'
           initial="hidden"
           animate={controls}
-          variants={animationVariants}>
+          variants={animationVariants}
+          ref={ref}>
           <div className='flex justify-center items-center'>
             <Image alt="wordpress" src={Wordpress} className='h-20 w-20' height={150} width={150} />
           </div>

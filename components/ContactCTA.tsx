@@ -34,7 +34,7 @@ export default function ContactCTA() {
     >
       <div className='block w-full bg-black mt-6' ref={ref}>
         <div className='flex flex-col justify-center items-center'>
-          <Image src={Desk} alt='DeskCTA' height={4000} width={6000} className='w-full' />
+          <Image src={Desk} alt='DeskCTA' height={4000} width={6000} priority className='w-full' />
           <div className='absolute w-3/4 md:mb-16  text-center text-white text-lg md:text-4xl lg:text-6xl flex flex-col items-center justify-center z-10'>
             <p className=' w-full mb-10 '>
               Proudly American business that is ambitious to lead in the digital space by working with great companies
