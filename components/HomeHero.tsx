@@ -34,10 +34,10 @@ export default function HomeHero() {
         animate={controls}
         className="relative inset-0 flex flex-col h-full justify-center items-center text-white"
       >
-        <h1 className="text-5xl lg:text-8xl text-left w-full lg:w-1/2 h-auto pt-36 pb-6">
+        <h1 className="text-5xl lg:text-8xl text-center w-full lg:w-1/2 h-auto pt-36 pb-6">
           Design & <span className="underline decoration-white">Growth</span>
         </h1>
-        <h4 className="text-lg lg:text-2xl text-center lg:text-left w-full lg:w-1/2 h-auto pb-12 ">
+        <h4 className="text-lg lg:text-2xl text-center lg:text-left w-full lg:w-1/3 h-auto pb-12 ">
           We craft web platforms and user experices to help businesses attract and convert their ideal clients and boost performance.
         </h4>
         <Link href="/contact">

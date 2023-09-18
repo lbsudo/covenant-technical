@@ -7,6 +7,7 @@ import OurStrengths from "@/components/OurStrenghts";
 import Values from "@/components/Values";
 import Vision from "@/components/Vision";
 import { motion, useAnimation } from 'framer-motion'
+import Image from 'next/image';
 
 export default function AboutPage() {
   const controls = useAnimation();
@@ -20,7 +21,15 @@ export default function AboutPage() {
 
   return (
     <>
-      <section className='py-40 flex justify-center flex-col w-full bg-cover bg-no-repeat bg-top z-0' style={{ backgroundImage: `url('/wrld.jpg')` }}>
+      <section className='py-40 flex justify-center flex-col w-full relative z-0' >
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src="/wrld.jpg"
+            alt="Background Image"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
         <motion.div className='relative w-full text-white flex flex-col justify-center items-center '
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
