@@ -32,7 +32,7 @@ export default function HomeCta() {
         animate={controls}
         variants={animationVariants}
       >
-        BRANDS THAT<span className="text-[#602AF2] font-bold"> EXPAND</span>
+        BRANDS THAT<span className="text-primary font-bold"> EXPAND</span>
       </motion.h3>
       <motion.p
         className="text-sm lg:text-xl text-center text-foreground font-bold uppercase mb-2"

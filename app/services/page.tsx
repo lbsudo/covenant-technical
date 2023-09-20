@@ -32,7 +32,7 @@ export default function ServicesPage() {
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
         >
-          <h1 className='text-6xl w-3/4 h-1/2 text-center mt-8'>Our Services</h1>
+          <h1 className='text-5xl lg:text-6xl w-3/4 h-1/2 text-center mt-8'>Our Services</h1>
           <h4 className='text-4xl w-3/4 h-1/4 mt-16 mb-16 text-center'>We provide a full suit of skills and services tailored to your business to help you attract, convert, and process your perfect client.</h4>
         </motion.div>
       </section>

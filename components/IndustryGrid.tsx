@@ -71,33 +71,36 @@ export default function IndustryGrid() {
   ];
 
   return (
-    <motion.div className="mx-8 pt-12 gap-2 grid grid-cols-2 sm:grid-cols-4"
-      initial="hidden"
-      animate={controls}
-      variants={animationVariants}
-      ref={ref}>
-      {list.map((item, index) => (
-        <Card shadow="sm" isPressable key={index} >
-          <CardBody className="overflow-visible p-0">
-            <Link href={item.href}>
-              <Image
-                shadow="sm"
-                radius="lg"
-                width="100%"
-                alt={item.title}
-                className="w-full object-cover h-[200px]"
-                src={item.img}
+    <>
+      <h2 className="text-3xl lg:text-6xl pt-8">Industries We Serve</h2>
+      <motion.div className="mx-8 pt-8 gap-2 grid grid-cols-2 sm:grid-cols-4"
+        initial="hidden"
+        animate={controls}
+        variants={animationVariants}
+        ref={ref}>
+        {list.map((item, index) => (
+          <Card shadow="sm" isPressable key={index} >
+            <CardBody className="overflow-visible p-0">
+              <Link href={item.href}>
+                <Image
+                  shadow="sm"
+                  radius="lg"
+                  width="100%"
+                  alt={item.title}
+                  className="w-full object-cover h-[200px]"
+                  src={item.img}
 
-              />
+                />
+              </Link>
+            </CardBody>
+            <Link href={item.href}>
+              <CardFooter className="text-small justify-between">
+                <b>{item.title}</b>
+              </CardFooter>
             </Link>
-          </CardBody>
-          <Link href={item.href}>
-            <CardFooter className="text-small justify-between">
-              <b>{item.title}</b>
-            </CardFooter>
-          </Link>
-        </Card>
-      ))}
-    </motion.div>
+          </Card>
+        ))}
+      </motion.div>
+    </>
   );
 }

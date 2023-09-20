@@ -31,12 +31,12 @@ export default function HomeHero() {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
-        className="relative inset-0 flex flex-col h-full items-center justify-center text-white"
+        className="relative inset-0 flex flex-col h-auto  items-center justify-between text-white"
       >
-        <h1 className="text-3xl lg:text-6xl w-full lg:w-1/2 h-auto pt-12 pb-4  lg:pb-6 text-center">
+        <h1 className="text-5xl lg:text-6xl xl:text-8xl w-full lg:w-1/2 h-auto pt-16 md:pt-20 xl:pt-36 text-center">
           Design & <span className="underline decoration-white">Growth</span>
         </h1>
-        <h4 className="text-sm lg:text-lg w-full lg:w-1/2 h-auto pb-6 lg:pb-12 text-center">
+        <h4 className="text-2xl md:text-4xl w-3/4 h-1/4 mt-8 pb-7 text-center">
           We craft web platforms and user experiences to help businesses attract and convert their ideal clients and boost performance.
         </h4>
         <Link href="/contact">

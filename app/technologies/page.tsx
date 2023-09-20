@@ -32,7 +32,7 @@ export default function TechnologiesPage() {
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
         >
-          <h1 className='text-6xl w-3/4 h-1/2 text-center mt-8'>Technologies We Work with</h1>
+          <h1 className='text-5xl lg:text-6xl w-3/4 h-1/2 text-center mt-8'>Technologies We Work with</h1>
           <h4 className='text-4xl w-3/4 h-1/4 mt-16 mb-16 text-center'>Working with the best cutting edge and legacy technology to get the best results for our clients and experince for their customers through strategic digital platforms.</h4>
         </motion.div>
       </section>

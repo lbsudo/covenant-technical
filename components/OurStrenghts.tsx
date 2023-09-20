@@ -30,7 +30,8 @@ export default function OurStrengths() {
     <motion.div
       initial="hidden"
       animate={controls}
-      variants={animationVariants}>
+      variants={animationVariants}
+      className='pb-4'>
       <div className='flex justify-center items-center' ref={ref}>
         <div className='text-foreground text-2xl text-left w-full flex flex-col justify-center mx-4 pb-1'>
           <h2 className='text-4xl py-4 w-full'>Covenant Cyber Strengths</h2>

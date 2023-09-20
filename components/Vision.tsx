@@ -28,7 +28,7 @@ export default function Vision() {
       animate={controls}
       variants={animationVariants}>
       <div className='mx-auto px-4 py-8 md:max-w-5xl md:px-8 lg:px-16' ref={ref}>
-        <div className='text-center text-4xl md:text-6xl font-bold py-16'>
+        <div className='text-center text-4xl md:text-6xl py-16'>
           <h1>Covenant Vision</h1>
           <p className='text-base md:text-lg mt-4 pb-8'>
             Our vision is to be our clients&apos; full suite Digital Design and development agency and offer a full suite of services to help our clients go from the first concept to deployment and beyond using innovative design, seamless user experiences, and emerging technologies. We aspire to be the catalyst to help you thrive in the digital world.

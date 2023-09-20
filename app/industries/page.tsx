@@ -31,7 +31,7 @@ export default function IndustriesPage() {
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
         >
-          <h1 className='text-6xl w-3/4 h-1/2 text-center mt-8'>Industries We Work With</h1>
+          <h1 className='text-5xl lg:text-6xl w-3/4 h-1/2 text-center mt-8'>Industries We Work With</h1>
           <h4 className='text-4xl w-3/4 h-1/4 mt-16 mb-16 text-center'>We work with a wide ranges of businesses that face similar problems but need specialized solutions that fit their needs these are just some of the industries we work with.</h4>
         </motion.div>
       </section>

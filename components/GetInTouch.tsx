@@ -20,7 +20,7 @@ export default function GetInTouch() {
           </div>
         </div>
         <div className="mb-4 mt-8">
-          <h6 className="text-lg lg:text-xl text-left">We would love to connect and understand how we can provide solutions to grow your business</h6>
+          <h6 className="text-lg lg:text-xl text-left">Lets hop on a call and talk about how we can provide solutions to grow your business.</h6>
         </div>
         <Link href={'https://calendly.com/currencycovenant/free-consultation-call'} target='_blank'>
           <Button
@@ -29,7 +29,7 @@ export default function GetInTouch() {
             variant="ghost"
             aria-label="Schedule A Call"
           >
-            Schedule A Call
+            Book A Discovery Call
           </Button>
         </Link>
       </div>

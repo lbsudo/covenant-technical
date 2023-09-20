@@ -27,7 +27,7 @@ export default function Values() {
       animate={controls}
       variants={animationVariants}>
       <div className='text-foreground mx-auto px-2 py-8 md:max-w-5xl md:px-4 lg:px-8' ref={ref}>
-        <h1 className='text-4xl md:text-6xl text-center font-bold py-8'>Our Values</h1>
+        <h1 className='text-4xl md:text-6xl text-center py-8'>Our Values</h1>
 
         <div className='mb-12'>
           <h3 className='text-xl md:text-2xl font-semibold mb-4'>Tenacity</h3>
