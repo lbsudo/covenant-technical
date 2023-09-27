@@ -1,8 +1,14 @@
+import { getSlugs } from "./lib/sanity.functions"
 
 export default async function sitemap() {
   const baseUrl = "https://currencycovenant.com"
   const inds = "industries"
 
+  const postSlugs = await getSlugs();
+  const postUrls = postSlugs.map(post => ({
+    url: `${baseUrl}/post/${post.slug}`,
+    lastModified: new Date(),
+  }))
   return [
     { url: baseUrl, lastModified: new Date() },
 
@@ -20,6 +26,8 @@ export default async function sitemap() {
     { url: `${baseUrl}/${inds}/tech-&amp;-sass`, lastModified: new Date() },
     { url: `${baseUrl}/${inds}/trades-&amp;-services`, lastModified: new Date() },
     { url: `${baseUrl}/${inds}/travel`, lastModified: new Date() },
+
+    ...postUrls,
     { url: `${baseUrl}/contact`, lastModified: new Date() },
   ]
 }
