@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: "",
+      },
+    ],
     domains: [
       'cdn.simpleicons.org', // Allow the main domain
       'cdn.simpleicons.org/Wordpress', // Allow the specific URLs
