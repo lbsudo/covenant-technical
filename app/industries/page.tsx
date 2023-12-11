@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import IndustryGrid from "@/components/IndustryGrid";
+import IndustryGrid from "@/components/industries/IndustryGrid";
 import { motion, useAnimation } from 'framer-motion'
 import Image from 'next/image';
 

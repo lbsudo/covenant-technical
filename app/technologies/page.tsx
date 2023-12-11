@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import AllServices from "@/components/AllServices";
+import AllServices from "@/components/technologies/AllServices";
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 

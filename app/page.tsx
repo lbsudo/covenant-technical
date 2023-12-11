@@ -1,9 +1,9 @@
-import HomeCta from "@/components/HomeCta";
-import MotionBar from "@/components/MotionBar";
-import TechServices from "@/components/TechServices";
-import HomeTechnologies from "@/components/HomeTechnologies";
-import ContactCTA from "@/components/ContactCTA";
-import HomeHero from '@/components/HomeHero';
+import HomeCta from "@/components/home/HomeCta";
+import MotionBar from "@/components/home/MotionBar";
+import TechServices from "@/components/home/TechServices";
+import HomeTechnologies from "@/components/home/HomeTechnologies";
+import ContactCTA from "@/components/home/ContactCTA";
+import HomeHero from '@/components/home/HomeHero';
 
 
 export default async function Home() {
@@ -24,7 +24,6 @@ export default async function Home() {
       <section>
         <HomeTechnologies />
       </section>
-
       <section>
         <ContactCTA />
       </section>

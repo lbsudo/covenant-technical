@@ -10,18 +10,12 @@ import {
 } from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-
 import { usePathname } from 'next/navigation'
-
 import { link as linkStyles } from "@nextui-org/theme";
-
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
-
 import { ThemeSwitch } from "@/components/theme-switch";
 import { baseButton } from "./primitives";
-
-
 import { Logo } from "@/components/icons";
 
 export const Navbar = () => {

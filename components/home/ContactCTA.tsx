@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
-import Desk from '../public/deskwork.jpg'
+import Desk from '../../public/deskwork.jpg'
 import Image from 'next/image'
-import { largeButton } from './primitives';
+import { largeButton } from '../primitives';
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { useInView } from 'react-intersection-observer';

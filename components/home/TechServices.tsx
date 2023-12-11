@@ -6,7 +6,7 @@ import { motion, useAnimation } from 'framer-motion';
 
 export default function TechServices() {
   const itemClasses = {
-    title: "font-normal text-3xl",
+    title: "font-normal text-3xl text-left",
   };
 
   const controls = useAnimation();
@@ -31,10 +31,10 @@ export default function TechServices() {
       animate={controls}
       variants={animationVariants}
       ref={ref}>
-      <h2 className="text-5xl pt-12 pb-4">Our Digital Services</h2>
-      <Accordion selectionMode="multiple" itemClasses={itemClasses}>
-        <AccordionItem key="1" aria-label="Web & Software Development" title="Digital Platform Development">
-          <div className='flex flex-col md:flex-row w-full justify-between '>
+      <h2 className="text-5xl pt-12 pb-4">Our Services</h2>
+      <Accordion selectionMode="single" itemClasses={itemClasses}>
+        <AccordionItem key="1" aria-label="Web & Software Development" title="Digital Platform Development" >
+          <div className='flex flex-col md:flex-row w-full justify-between'>
             <div className='text-left md:w-1/2 md:text-2xl'>
               <p>We employ the latest technologies to boldly design and reimagine your software platform interface, media graphics, and customer experience (CX) whether on web or native systems to accelerate your business.</p>
             </div>

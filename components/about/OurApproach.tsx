@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import Process from '../public/process.png'
+import Process from '../../public/process.png'
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 

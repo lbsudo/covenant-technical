@@ -1,11 +1,11 @@
 import React from 'react'
-import AboutBar from "@/components/AboutBar";
-import OurApproach from "@/components/OurApproach";
-import OurExpertise from "@/components/OurExpertise";
-import OurStrengths from "@/components/OurStrenghts";
-import Values from "@/components/Values";
-import Vision from "@/components/Vision";
-import AboutHero from '@/components/AboutHero';
+import AboutBar from "@/components/about/AboutBar";
+import OurApproach from "@/components/about/OurApproach";
+import OurExpertise from "@/components/about/OurExpertise";
+import OurStrengths from "@/components/about/OurStrenghts";
+import Values from "@/components/about/Values";
+import Vision from "@/components/about/Vision";
+import AboutHero from '@/components/about/AboutHero';
 
 
 export async function generateMetadata() {

@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion'
 import { Button } from '@nextui-org/button';
 import { Link } from '@nextui-org/link';
-import { heroButton } from './primitives';
+import { heroButton } from '../primitives';
 
 
 export default function HomeHero() {

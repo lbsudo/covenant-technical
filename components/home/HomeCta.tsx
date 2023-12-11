@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@nextui-org/react';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
-import { baseButton } from './primitives';
+import { baseButton } from '../primitives';
 
 export default function HomeCta() {
   const controls = useAnimation();

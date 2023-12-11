@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import PrincipleDiamond from '../public/principle-diamond.png';
+import PrincipleDiamond from '../../public/principle-diamond.png';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 
