@@ -29,7 +29,7 @@ export const Navbar = () => {
         </NextLink>
       </NavbarBrand>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
-        <ul className="hidden md:flex gap-4 justify-start ">
+        <ul className="hidden md:flex gap-4  ">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
