@@ -83,20 +83,17 @@ export default function ContactForm() {
 
   return (
     <div className="w-full md:px-12">
-      <form className="flex flex-col justify-center items-center w-full mb-8" onSubmit={handleSubmit}>
-        {/* Add input fields with appropriate name attributes */}
-        <div className="flex w-full flex-wrap md:flex-nowrap gap-2 mb-2">
-          <Input type="text" variant='underlined' name="firstNameLastName" aria-label="First Name Last Name" label="First & Last Name" labelPlacement='inside' placeholder="Enter Full Name" isRequired value={formData.firstNameLastName} onChange={handleChange} />
-          {/* <Input type="text" name="lastName" aria-label="Last Name" placeholder="Last Name" value={formData.lastName} onChange={handleChange} /> */}
-        </div>
-        {/* Add other input fields and select with name attributes */}
-        <div className="flex w-full flex-wrap md:flex-nowrap gap-2">
-          <Input type="text" variant='underlined' name="email" aria-label="Email" label="Email Address" labelPlacement='inside' isRequired placeholder="Enter Email Address" value={formData.email} onChange={handleChange} />
-          <Input type="text" variant='underlined' name="phoneNumber" aria-label="Phone Number" label="Phone Number (optional)" labelPlacement='inside' placeholder="Enter Phone Number" value={formData.phoneNumber} onChange={handleChange} />
+      <form className="flex flex-col justify-center items-center w-full h-auto mb-8" onSubmit={handleSubmit}>
+        <div className="flex w-full h-auto flex-wrap md:flex-nowrap gap-2 mb-2">
+          <Input type="text" variant='underlined' name="firstNameLastName" aria-label="First Name Last Name" placeholder="Enter Full Name" isRequired value={formData.firstNameLastName} onChange={handleChange} />
         </div>
         <div className="flex w-full flex-wrap md:flex-nowrap gap-2">
-          <Input type="text" variant='underlined' name="companyName" aria-label="Company Name" label="Company Name" labelPlacement='inside' isRequired placeholder="Enter Company Name" value={formData.companyName} onChange={handleChange} />
-          <Input type="text" variant='underlined' name="websiteUrl" aria-label="Website URL" label="Website URL (optional)" labelPlacement='inside' placeholder="Enter Website URL (Link)" value={formData.websiteUrl} onChange={handleChange} />
+          <Input type="email" variant='underlined' name="email" aria-label="Email" isRequired placeholder="Enter Email Address" value={formData.email} onChange={handleChange} />
+          <Input type="tel" variant='underlined' name="phoneNumber" aria-label="Phone Number" placeholder="Enter Phone Number" value={formData.phoneNumber} onChange={handleChange} />
+        </div>
+        <div className="flex w-full flex-wrap md:flex-nowrap gap-2">
+          <Input type="text" variant='underlined' name="companyName" aria-label="Company Name" placeholder="Enter Company Name" value={formData.companyName} onChange={handleChange} />
+          <Input type="url" variant='underlined' name="websiteUrl" aria-label="Website URL" placeholder="Enter Website URL(optional)" value={formData.websiteUrl} onChange={handleChange} />
         </div>
         <Textarea
           variant='underlined'
