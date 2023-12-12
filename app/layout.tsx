@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import React from "react";
-import { Metadata, Viewport } from "next";
+import { Metadata } from "next";
+// import { Viewport } from "next";
 import { siteConfig } from "@/config/site";
 import { fontRoboto } from "@/config/fonts";
 import { Providers } from "./providers";
@@ -15,10 +16,10 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  // themeColor: [
-  //   { media: "(prefers-color-scheme: light)", color: "white" },
-  //   { media: "(prefers-color-scheme: dark)", color: "black" },
-  // ],
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
   icons: {
     icon: "/covenantTechnical.ico",
     shortcut: "/favicon-16x16.png",
@@ -26,12 +27,12 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-}
+// export const viewport: Viewport = {
+//   themeColor: [
+//     { media: "(prefers-color-scheme: light)", color: "white" },
+//     { media: "(prefers-color-scheme: dark)", color: "black" },
+//   ],
+// }
 
 export default function RootLayout({
   children,

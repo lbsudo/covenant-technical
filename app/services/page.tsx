@@ -68,7 +68,7 @@ We start from scratch and build a tool that meets your specific requirements." I
       </section>
       <section className='px-12 pb-8'>
         <h1 className='text-5xl lg:text-6xl w-full text-center font-medium mt-8 flex justify-center items-center pb-4'>Maintenance Plans</h1>
-        <p className='text-md text-center'>The perfect solution for small and medium-sized businesses who have regular updates to their websites, mobile apps, or other software we've created for them.</p>
+        <p className='text-md text-center'>The perfect solution for small and medium-sized businesses who have regular updates to their websites, mobile apps, or other software we&apos;ve created for them.</p>
         <div className='flex flex-col md:flex-row justify-center items-center gap-4 pb-4'>
           <PlanCard title='Copper' time='2 hours/month' price='$150/month' addy='$75' className='w-full md:w-1/3' />
           <PlanCard title='Bronze' time='5 hours/month' price='$375/month' addy='$75' className='w-full md:w-1/3' />
